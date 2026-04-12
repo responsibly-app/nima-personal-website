@@ -89,7 +89,7 @@ export function About() {
               className="mb-10"
             >
               <p className="text-[#5a4832] text-lg leading-relaxed mb-5">
-                Nema started WFG the day before he turned 20 — no mentor, no team, and no results
+                Nima started WFG the day before he turned 20 — no mentor, no team, and no results
                 for years. He battled anxiety, depression, and constant rejection, yet kept showing
                 up every single day. Cut from soccer teams, failed academically, failed at Forex,
                 Amazon FBA, and every side business he tried.
