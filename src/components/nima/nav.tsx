@@ -29,17 +29,17 @@ export function Nav() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#05050a]/90 backdrop-blur-xl border-b border-[#c9a84c]/10 py-3"
+            ? "bg-white/80 backdrop-blur-xl border-b border-[#c9a84c]/15 shadow-sm shadow-[#c9a84c]/5 py-3"
             : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-full border border-[#c9a84c]/60 flex items-center justify-center group-hover:border-[#c9a84c] transition-colors">
+            <div className="w-8 h-8 rounded-full border border-[#c9a84c]/60 flex items-center justify-center group-hover:border-[#c9a84c] group-hover:bg-[#c9a84c]/5 transition-all">
               <span className="text-[#c9a84c] text-xs font-bold font-heading">N</span>
             </div>
-            <span className="font-heading text-[#f5f0e8] text-lg font-semibold tracking-wide">
+            <span className="font-heading text-[#1c1409] text-lg font-semibold tracking-wide">
               Nima Attar
             </span>
           </a>
@@ -50,14 +50,14 @@ export function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-[#8a7a6a] hover:text-[#c9a84c] transition-colors tracking-wider uppercase font-medium"
+                className="text-sm text-[#9b8b74] hover:text-[#c9a84c] transition-colors tracking-wider uppercase font-medium"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#connect"
-              className="px-5 py-2 border border-[#c9a84c] text-[#c9a84c] text-sm font-medium tracking-wider uppercase hover:bg-[#c9a84c] hover:text-[#05050a] transition-all duration-300"
+              className="px-5 py-2 border border-[#c9a84c] text-[#8b6914] text-sm font-medium tracking-wider uppercase hover:bg-[#c9a84c] hover:text-white transition-all duration-300"
             >
               Join Agency
             </a>
@@ -93,7 +93,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#05050a]/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
           >
             {links.map((link, i) => (
               <motion.a
@@ -103,7 +103,7 @@ export function Nav() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 onClick={() => setMenuOpen(false)}
-                className="text-2xl font-heading text-[#f5f0e8] hover:text-[#c9a84c] transition-colors tracking-wider"
+                className="text-2xl font-heading text-[#1c1409] hover:text-[#c9a84c] transition-colors tracking-wider"
               >
                 {link.label}
               </motion.a>
@@ -114,7 +114,7 @@ export function Nav() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: links.length * 0.08 }}
               onClick={() => setMenuOpen(false)}
-              className="mt-4 px-8 py-3 border border-[#c9a84c] text-[#c9a84c] text-sm font-medium tracking-widest uppercase hover:bg-[#c9a84c] hover:text-[#05050a] transition-all duration-300"
+              className="mt-4 px-8 py-3 border border-[#c9a84c] text-[#8b6914] text-sm font-medium tracking-widest uppercase hover:bg-[#c9a84c] hover:text-white transition-all duration-300"
             >
               Join Agency
             </motion.a>

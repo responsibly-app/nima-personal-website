@@ -58,26 +58,21 @@ export function Agency() {
     <section
       id="agency"
       ref={ref}
-      className="relative py-32 bg-[#0d0d18] overflow-hidden"
+      className="relative py-28 bg-[#f2ebe0] overflow-hidden"
     >
-      {/* Decorative large text background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-heading text-[20vw] font-black text-[#c9a84c]/3 pointer-events-none select-none whitespace-nowrap">
-        AGENCY
-      </div>
-
       {/* Gold top line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/60 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="grid md:grid-cols-2 gap-12 items-end mb-20">
+        <div className="grid md:grid-cols-2 gap-12 items-end mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
             <span className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase font-medium">The Powerhouse</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-black text-[#f5f0e8] mt-3 leading-none">
+            <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] mt-3 leading-none">
               The Agency
               <span className="block italic text-[#c9a84c]">Behind the Mission.</span>
             </h2>
@@ -88,14 +83,14 @@ export function Agency() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-[#8a7a6a] leading-relaxed mb-6">
+            <p className="text-[#9b8b74] leading-relaxed mb-5">
               What Nima has built is more than an agency — it&apos;s a movement. A place where
               financial professionals from all walks of life come to build something extraordinary.
               Where your background doesn&apos;t define your ceiling. Where your work ethic does.
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-8 h-px bg-[#c9a84c]/40" />
-              <span className="text-[#c9a84c] text-sm font-medium italic font-heading">
+              <div className="w-8 h-px bg-[#c9a84c]/50" />
+              <span className="text-[#8b6914] text-sm font-medium italic font-heading">
                 &ldquo;We don&rsquo;t hire agents. We build leaders.&rdquo;
               </span>
             </div>
@@ -103,20 +98,17 @@ export function Agency() {
         </div>
 
         {/* Pillars grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.number}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 + i * 0.1 }}
-              className="group relative p-8 border border-[#c9a84c]/10 hover:border-[#c9a84c]/40 transition-all duration-500 hover:bg-[#c9a84c]/3"
+              className="group relative p-7 bg-white/60 backdrop-blur-sm border border-[#c9a84c]/15 hover:border-[#c9a84c]/40 hover:bg-white/80 transition-all duration-500 overflow-hidden"
             >
-              {/* Hover glow */}
-              <div className="absolute inset-0 bg-linear-to-br from-[#c9a84c]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
               {/* Number */}
-              <span className="font-heading text-5xl font-black text-[#c9a84c]/15 group-hover:text-[#c9a84c]/25 transition-colors duration-300 block mb-4">
+              <span className="font-heading text-5xl font-black text-[#c9a84c]/12 group-hover:text-[#c9a84c]/20 transition-colors duration-300 block mb-4">
                 {pillar.number}
               </span>
 
@@ -124,39 +116,16 @@ export function Agency() {
               <div className="text-[#c9a84c] mb-4">{pillar.icon}</div>
 
               {/* Title */}
-              <h3 className="text-[#f5f0e8] font-bold text-lg mb-3">{pillar.title}</h3>
+              <h3 className="text-[#1c1409] font-bold text-lg mb-2">{pillar.title}</h3>
 
               {/* Description */}
-              <p className="text-[#8a7a6a] text-sm leading-relaxed">{pillar.description}</p>
+              <p className="text-[#9b8b74] text-sm leading-relaxed">{pillar.description}</p>
 
               {/* Bottom accent */}
               <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-linear-to-r from-[#c9a84c] to-transparent transition-all duration-500" />
             </motion.div>
           ))}
         </div>
-
-        {/* Agency achievements bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 p-8 border border-[#c9a84c]/20 bg-[#c9a84c]/5 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <div className="text-center md:text-left">
-            <div className="text-[#c9a84c] text-xs tracking-widest uppercase mb-1">Award Winning</div>
-            <div className="text-[#f5f0e8] font-semibold text-lg">Top Financial Agency — 5 Consecutive Years</div>
-          </div>
-          <div className="hidden md:block w-px h-12 bg-[#c9a84c]/20" />
-          <div className="text-center">
-            <div className="text-[#c9a84c] text-xs tracking-widest uppercase mb-1">Ranked</div>
-            <div className="text-[#f5f0e8] font-semibold text-lg">#1 Agency for Agent Growth & Retention</div>
-          </div>
-          <div className="hidden md:block w-px h-12 bg-[#c9a84c]/20" />
-          <div className="text-center md:text-right">
-            <div className="text-[#c9a84c] text-xs tracking-widest uppercase mb-1">National Presence</div>
-            <div className="text-[#f5f0e8] font-semibold text-lg">Offices in 12 Major Cities</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
