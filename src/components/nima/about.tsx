@@ -96,8 +96,8 @@ export function About() {
               </p>
               <p className="text-[#9b8b74] leading-relaxed">
                 One question changed everything: <em>&ldquo;If someone put a gun to my head, would I find a way?&rdquo;</em>{" "}
-                The answer was always yes. Today, over 634 team members attend his conventions,
-                he&apos;s a $1M ring earner at CEO/EVC rank, and he credits every setback as the
+                The answer was always yes. Today, over 1,000 team members attend his conventions,
+                he&apos;s a $1.8M ring earner at CEVC rank, and he credits every setback as the
                 fuel that built it all.
               </p>
             </motion.div>
