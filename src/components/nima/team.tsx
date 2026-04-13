@@ -80,7 +80,7 @@ export function Team() {
     <section
       id="team"
       ref={ref}
-      className="relative py-28 bg-[#faf7f2] overflow-hidden"
+      className="relative py-28 bg-[#faf7f2] dark:bg-[#0f0d0a] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/40 to-transparent" />
 
@@ -93,7 +93,7 @@ export function Team() {
           className="text-center mb-16"
         >
           <span className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase font-medium">The People</span>
-          <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] mt-3 leading-none">
+          <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] dark:text-[#f5f0e8] mt-3 leading-none">
             Success
             <span className="italic text-[#c9a84c]"> Stories.</span>
           </h2>
@@ -111,10 +111,10 @@ export function Team() {
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 + i * 0.1 }}
-              className="group relative border border-[#c9a84c]/15 hover:border-[#c9a84c]/35 transition-all duration-500 overflow-hidden bg-white/70 backdrop-blur-sm hover:bg-white/90"
+              className="group relative border border-[#c9a84c]/15 hover:border-[#c9a84c]/35 transition-all duration-500 overflow-hidden bg-white/70 dark:bg-[#1a1611]/70 backdrop-blur-sm hover:bg-white/90 dark:hover:bg-[#1a1611]/90"
             >
               {/* Card header */}
-              <div className="relative p-7 bg-[#f2ebe0]/60 border-b border-[#c9a84c]/10 flex items-start gap-4">
+              <div className="relative p-7 bg-[#f2ebe0]/60 dark:bg-[#1f1c14]/60 border-b border-[#c9a84c]/10 flex items-start gap-4">
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold shrink-0 border"
                   style={{
@@ -126,7 +126,7 @@ export function Team() {
                   {member.initials}
                 </div>
                 <div>
-                  <h3 className="text-[#1c1409] font-bold text-base">{member.name}</h3>
+                  <h3 className="text-[#1c1409] dark:text-[#f5f0e8] font-bold text-base">{member.name}</h3>
                   <p className="text-[#9b8b74] text-sm">{member.title}</p>
                   <span
                     className="inline-block mt-1.5 px-2 py-0.5 text-xs font-medium tracking-wider rounded"

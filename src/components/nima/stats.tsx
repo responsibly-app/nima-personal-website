@@ -53,7 +53,7 @@ export function Stats() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative py-20 bg-[#f2ebe0] overflow-hidden">
+    <section ref={ref} className="relative py-20 bg-[#f2ebe0] dark:bg-[#130f08] overflow-hidden">
       {/* Gold accent lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
@@ -79,7 +79,7 @@ export function Stats() {
                   started={isInView}
                 />
               </div>
-              <div className="text-[#1c1409] font-semibold text-sm tracking-wider uppercase mb-1">
+              <div className="text-[#1c1409] dark:text-[#f5f0e8] font-semibold text-sm tracking-wider uppercase mb-1">
                 {stat.label}
               </div>
               <div className="text-[#9b8b74] text-xs tracking-wide">{stat.description}</div>

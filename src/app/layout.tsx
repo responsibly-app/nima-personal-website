@@ -1,6 +1,7 @@
 import { Inter, Geist_Mono, Playfair_Display } from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -37,9 +38,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${fontMono.variable}`}
+      suppressHydrationWarning
     >
-      <body className="bg-[#05050a] text-[#f5f0e8] font-sans antialiased overflow-x-hidden">
-        {children}
+      <body className="bg-bg text-foreground font-sans antialiased overflow-x-hidden">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

@@ -63,7 +63,7 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#faf7f2] border-t border-[#c9a84c]/15">
+    <footer className="relative bg-[#faf7f2] dark:bg-[#0f0d0a] border-t border-[#c9a84c]/15">
       {/* Gold top accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
 
@@ -76,7 +76,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-full border border-[#c9a84c]/50 flex items-center justify-center bg-[#c9a84c]/5">
                 <span className="text-[#c9a84c] text-sm font-bold font-heading">N</span>
               </div>
-              <span className="font-heading text-[#1c1409] text-xl font-semibold tracking-wide">
+              <span className="font-heading text-[#1c1409] dark:text-[#f5f0e8] text-xl font-semibold tracking-wide">
                 Nima Attar
               </span>
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 border border-[#c9a84c]/20 bg-white/60 flex items-center justify-center text-[#9b8b74] hover:text-[#c9a84c] hover:border-[#c9a84c]/50 hover:bg-[#c9a84c]/5 transition-all duration-300"
+                  className="w-10 h-10 border border-[#c9a84c]/20 bg-white/60 dark:bg-[#1a1611]/60 flex items-center justify-center text-[#9b8b74] hover:text-[#c9a84c] hover:border-[#c9a84c]/50 hover:bg-[#c9a84c]/5 transition-all duration-300"
                 >
                   {social.icon}
                 </a>

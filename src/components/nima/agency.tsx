@@ -58,7 +58,7 @@ export function Agency() {
     <section
       id="agency"
       ref={ref}
-      className="relative py-28 bg-[#f2ebe0] overflow-hidden"
+      className="relative py-28 bg-[#f2ebe0] dark:bg-[#130f08] overflow-hidden"
     >
       {/* Gold top line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
@@ -72,7 +72,7 @@ export function Agency() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase font-medium">The Powerhouse</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] mt-3 leading-none">
+            <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] dark:text-[#f5f0e8] mt-3 leading-none">
               The Agency
               <span className="block italic text-[#c9a84c]">Behind the Mission.</span>
             </h2>
@@ -105,7 +105,7 @@ export function Agency() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 + i * 0.1 }}
-              className="group relative p-7 bg-white/60 backdrop-blur-sm border border-[#c9a84c]/15 hover:border-[#c9a84c]/40 hover:bg-white/80 transition-all duration-500 overflow-hidden"
+              className="group relative p-7 bg-white/60 dark:bg-[#1a1611]/60 backdrop-blur-sm border border-[#c9a84c]/15 hover:border-[#c9a84c]/40 hover:bg-white/80 dark:hover:bg-[#1a1611]/80 transition-all duration-500 overflow-hidden"
             >
               {/* Number */}
               <span className="font-heading text-5xl font-black text-[#c9a84c]/12 group-hover:text-[#c9a84c]/20 transition-colors duration-300 block mb-4">
@@ -116,7 +116,7 @@ export function Agency() {
               <div className="text-[#c9a84c] mb-4">{pillar.icon}</div>
 
               {/* Title */}
-              <h3 className="text-[#1c1409] font-bold text-lg mb-2">{pillar.title}</h3>
+              <h3 className="text-[#1c1409] dark:text-[#f5f0e8] font-bold text-lg mb-2">{pillar.title}</h3>
 
               {/* Description */}
               <p className="text-[#9b8b74] text-sm leading-relaxed">{pillar.description}</p>

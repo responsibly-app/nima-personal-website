@@ -1,7 +1,8 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import { motion, useInView } from "framer-motion"
+import { useTheme } from "next-themes"
 import { CircularTestimonials } from "@/components/ui/circular-testimonials"
 
 const testimonials = [
@@ -38,12 +39,20 @@ const testimonials = [
 export function Testimonials() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const isDark = mounted && resolvedTheme === "dark"
 
   return (
     <section
       id="testimonials"
       ref={ref}
-      className="relative py-28 bg-[#f2ebe0] overflow-hidden"
+      className="relative py-28 bg-[#f2ebe0] dark:bg-[#130f08] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
 
@@ -61,7 +70,7 @@ export function Testimonials() {
           <span className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase font-medium">
             Social Proof
           </span>
-          <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] mt-3 leading-none">
+          <h2 className="font-heading text-5xl md:text-7xl font-black text-[#1c1409] dark:text-[#f5f0e8] mt-3 leading-none">
             What They
             <span className="italic text-[#c9a84c]"> Say.</span>
           </h2>
@@ -78,9 +87,9 @@ export function Testimonials() {
             testimonials={testimonials}
             autoplay={true}
             colors={{
-              name: "#1c1409",
+              name: isDark ? "#f5f0e8" : "#1c1409",
               designation: "#9b8b74",
-              testimony: "#5a4832",
+              testimony: isDark ? "#c9b088" : "#5a4832",
               arrowBackground: "#c9a84c",
               arrowForeground: "#ffffff",
               arrowHoverBackground: "#8b6914",

@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-[#faf7f2]"
+      className="relative min-h-screen overflow-hidden bg-[#faf7f2] dark:bg-[#0f0d0a]"
     >
       {/* Prominent image — takes up 72% from right, barely any overlay */}
       <motion.div
@@ -28,12 +28,12 @@ export function Hero() {
         {/* Thin left-edge blend only — no heavy fog */}
         <div
           className="absolute inset-0 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, #faf7f2, #faf7f2 6%, transparent 20%)" }}
+          style={{ background: "linear-gradient(to right, var(--bg), var(--bg) 6%, transparent 20%)" }}
         />
         {/* Very slim bottom edge */}
         <div
           className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
-          style={{ height: "5rem", background: "linear-gradient(to top, #faf7f2, transparent)" }}
+          style={{ height: "5rem", background: "linear-gradient(to top, var(--bg), transparent)" }}
         />
         <Image
           src="/nima-attar-color.png"
@@ -69,7 +69,7 @@ export function Hero() {
             initial={{ y: 110, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="font-heading text-[21vw] sm:text-[16vw] md:text-[13vw] lg:text-[11.5rem] leading-none text-[#1c1409] font-black"
+            className="font-heading text-[21vw] sm:text-[16vw] md:text-[13vw] lg:text-[11.5rem] leading-none text-[#1c1409] dark:text-[#f5f0e8] font-black"
           >
             NIMA
           </motion.h1>
@@ -92,7 +92,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8"
         >
-          <p className="text-[#9b8b74] text-sm md:text-base leading-relaxed max-w-xs">
+          <p className="text-[#9b8b74] dark:text-[#7a6a58] text-sm md:text-base leading-relaxed max-w-xs">
             Leading over{" "}
             <span className="text-[#c9a84c] font-semibold">1,000 financial agents</span>{" "}
             toward unprecedented excellence and generational wealth creation.
