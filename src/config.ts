@@ -4,7 +4,7 @@ export const socialLinks = {
   xLink: "https://x.com/Nima__Attar",
   calendlyLink: "https://calendly.com/nattarteam",
   youtubeLink: "https://www.youtube.com/@NimaAttar",
-  email: "nimaattar@gmail.com",
+  email: "connect@nimaattar.com",
 }
 
 export const heroVideoUrl: string = "https://youtu.be/WFKL_MKEgIE"
