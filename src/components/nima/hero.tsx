@@ -25,6 +25,13 @@ export function Hero() {
         className="absolute right-0 top-0 w-[72%] h-full pointer-events-none hidden md:block"
         style={{ y: imageY }}
       >
+        {/* Glow behind image */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 70% 80% at 60% 85%, rgba(201,168,76,0.22) 0%, rgba(201,168,76,0.08) 40%, transparent 70%)",
+          }}
+        />
         {/* Thin left-edge blend only — no heavy fog */}
         <div
           className="absolute inset-0 z-10 pointer-events-none"
