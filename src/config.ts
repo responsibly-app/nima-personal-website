@@ -3,6 +3,7 @@ export const socialLinks = {
   facebookLink: "https://www.facebook.com/10Nima7/",
   xLink: "https://x.com/Nima__Attar",
   calendlyLink: "https://calendly.com/nattarteam",
+  youtubeLink: "https://www.youtube.com/@NimaAttar",
   email: "nimaattar@gmail.com",
 }
 
